@@ -1,6 +1,5 @@
 import { ShoppingCartService } from './shopping-cart.service';
 import { Component, OnInit } from '@angular/core';
-
 import {trigger, state, style, transition, animate, keyframes} from '@angular/animations';
 
 @Component({
@@ -24,7 +23,7 @@ import {trigger, state, style, transition, animate, keyframes} from '@angular/an
 })
 export class ShoppingCartComponent implements OnInit {
   rowState = 'ready'
-  
+
   constructor(private shoppingCartService: ShoppingCartService) { }
 
   ngOnInit() {
