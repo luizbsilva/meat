@@ -36,6 +36,7 @@ export class RestaurantsComponent implements OnInit {
 
   searchBarState = 'hidden'
   restaurants: Restaurant[]
+  
   searchForm: FormGroup
   searchControl: FormControl
 

@@ -1,5 +1,6 @@
 "use strict";
 exports.__esModule = true;
+var auth_1 = require("./auth");
 var jsonServer = require("json-server");
 var fs = require("fs");
 var https = require("https");
@@ -9,6 +10,7 @@ var middlewares = jsonServer.defaults();
 // Set default middlewares (logger, static, cors and no-cache)
 server.use(middlewares);
 server.use(jsonServer.bodyParser);
+server.post('/login', auth_1.handleAuthentication);
 // Use default router
 server.use(router);
 var options = {

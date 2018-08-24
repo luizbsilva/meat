@@ -1,3 +1,4 @@
+import { handleAuthentication } from './auth';
 import * as jsonServer from 'json-server'
 import {Express} from  'express'
 
@@ -12,6 +13,8 @@ const middlewares = jsonServer.defaults()
 server.use(middlewares)
 
 server.use(jsonServer.bodyParser)
+
+server.post('/login', handleAuthentication)
 
 // Use default router
 server.use(router)
