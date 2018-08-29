@@ -4,12 +4,13 @@ export class User {
         private password: string) { }
 
     macthes(another: User): boolean {
-        return another !== undefined && another.email === this.email && another.password === this.password
+        return another !== undefined && 
+            another.email === this.email && 
+            another.password === this.password
     }
 }
 
 export const users = {
-    "luizbsilva@gmail.com": new User("luizbsilva@gmail.com", "Luiz B Silva", "luiz23"),
-    "luizsilva@gmail.com": new User("luizsilva@gmail.com", "Luiz Silva", "silva23"),
-    "luizb@gmail.com": new User("luizb@gmail.com", "Luiz B", "b23")
+    "luizbsilva@gmail.com": new User('luizbsilva@gmail.com', 'Luiz B Silva','luiz23'),
+    "luizsilva@gmail.com": new User('luizsilva@gmail.com', 'Luiz Silva', 'silva23')
 }

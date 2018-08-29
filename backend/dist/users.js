@@ -7,13 +7,14 @@ var User = (function () {
         this.password = password;
     }
     User.prototype.macthes = function (another) {
-        return another !== undefined && another.email === this.email && another.password === this.password;
+        return another !== undefined &&
+            another.email === this.email &&
+            another.password === this.password;
     };
     return User;
 }());
 exports.User = User;
 exports.users = {
-    "luizbsilva@gmail.com": new User("luizbsilva@gmail.com", "Luiz B Silva", "luiz23"),
-    "luizsilva@gmail.com": new User("luizsilva@gmail.com", "Luiz Silva", "silva23"),
-    "luizb@gmail.com": new User("luizb@gmail.com", "Luiz B", "b23")
+    "luizbsilva@gmail.com": new User('luizbsilva@gmail.com', 'Luiz B Silva', 'luiz23'),
+    "luizsilva@gmail.com": new User('luizsilva@gmail.com', 'Luiz Silva', 'silva23')
 };
